@@ -1,0 +1,7 @@
+49bc7916 api key
+
+imdb link
+https://www.imdb.com/title/tt7044478/
+
+omdb link eg
+https://omdbapi.com/?apikey=49bc7916&t="avengers"&plot="full"

@@ -1,0 +1,7 @@
+overview
+budget
+genres
+imdb link
+spoken_languages[0].english_name
+status
+tagline
