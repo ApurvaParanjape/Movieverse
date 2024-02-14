@@ -6,7 +6,7 @@ import '@splidejs/react-splide/css';
 const Toprated = () => {
     const [upcomingMovie, setUpcomingMovie] = useState({});
   const fetchMovies = async()=>{
-    const url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=536569e789de0e2b79cd3baa04654885';
+    const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${process.env.API_KEY}`;
     
     const options = {
         method: 'GET',

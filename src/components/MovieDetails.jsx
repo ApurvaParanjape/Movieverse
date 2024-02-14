@@ -7,7 +7,7 @@ const MovieDetails = () => {
     const [details, setDetails] = useState({});
     
     const fetchMovies = async(id)=>{
-        const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US&api_key=536569e789de0e2b79cd3baa04654885`;
+        const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US&api_key=${process.env.API_KEY}`;
         
         const options = {
             method: 'GET',
