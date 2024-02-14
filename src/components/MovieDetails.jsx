@@ -34,11 +34,11 @@ const MovieDetails = () => {
     useEffect(()=>{
         fetchMovies(id)
         console.log(details)
-    }, [])
+    }, [id])
   return (
     <div className='container'>
         <div className="row m-4">
-            <div className="col-md-4 h-25" >
+            <div className="col-md-3 h-25" >
                 {console.log(details)}
                 <img className="card-img-top" src={details.poster_path ? `https://image.tmdb.org/t/p/original${details.poster_path}` : ""} alt="" />
             </div>
@@ -49,10 +49,11 @@ const MovieDetails = () => {
                 {/* {console.log(details.spoken_languages[0]?.english_name)} */}
                 {/* {console.log(details.spoken_languages[0].english_name)} */}
                 <div>
-                    <p><strong>Overview</strong></p>
+                    <h6><strong>Overview</strong></h6>
                     <p>{details.overview}</p>
                 </div>
                 <div>
+                  <p><strong>Rating: </strong><span className={details.vote_average>8? 'text-success': details.vote_average>5? "text-warning": "text-danger"}>{details.vote_average}</span></p>
                     <p><strong>Genres: </strong>
                      {
                         details.genres?.map(element => {

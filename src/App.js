@@ -26,7 +26,7 @@ function App() {
     {/* <MovieCard movie={movie}/> */}
     <Routes>
       <Route exact path='/' element={ <Home/>}/>
-      <Route exact path='/:id' element={ <MovieDetails/>}/>
+      <Route exact path='/details/:id' element={ <MovieDetails/>}/>
       <Route exact path='/search/:search' element={ <SearchResults/>}/>
     </Routes>
    

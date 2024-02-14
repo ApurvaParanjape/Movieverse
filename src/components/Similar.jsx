@@ -10,7 +10,7 @@ const Similar = ({language}) => {
     const [similar, setSimilar] =useState({})
 
     const fetchMovies = async()=>{
-        const url = `https://api.themoviedb.org/3/movie/${id}/similar?language=${language}&api_key=536569e789de0e2b79cd3baa04654885`;
+        const url = `https://api.themoviedb.org/3/movie/${id}/recommendations?language=${language}&api_key=536569e789de0e2b79cd3baa04654885`;
         
         const options = {
             method: 'GET',
@@ -38,12 +38,16 @@ const Similar = ({language}) => {
 
     useEffect(()=>{
         fetchMovies()
-    },[])
+    },[id])
   return (
     <div>
       <div className='h-25'>
         {/* {console.log(popularMovie.results)} */}
-        <h2>Similar Movies</h2>
+        <h2>
+        {
+          similar.results? "Similar Movies": ""
+        }
+        </h2>
         <Splide
         options={{
             perPage : 4,
